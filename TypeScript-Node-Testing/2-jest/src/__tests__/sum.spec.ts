@@ -9,4 +9,8 @@ describe("sum function", () => {
     const result = sum(-1, -2);
     expect(result).toBe(-3);
   });
+
+  it("empty test case", () => {
+    console.log("This is an empty test case");
+  });
 });
