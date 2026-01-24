@@ -1,4 +1,4 @@
-const usersUrl = 'https://www.course-api.com/jest-course/users';
+const usersUrl = "https://www.course-api.com/jest-course/users";
 
 export type User = {
   id: number;
@@ -10,9 +10,9 @@ export type User = {
 export class DatabaseService {
   static async createUser(name: string, email: string): Promise<User> {
     const response = await fetch(usersUrl, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({ name, email }),
     });
@@ -22,7 +22,7 @@ export class DatabaseService {
     }
 
     const data = (await response.json()) as User;
-    console.log('Database API Response : ', data);
+    console.log("API response: ", data);
     return data;
   }
 }
